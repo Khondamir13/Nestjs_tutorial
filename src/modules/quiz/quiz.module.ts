@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
 import { QuizController } from './controller/quiz.controller';
+import { QuizService } from './service/quiz.service';
 
 @Module({
-  controllers: [QuizController]
+  controllers: [QuizController],
+  providers: [QuizService]
 })
 export class QuizModule {}

@@ -1,10 +1,14 @@
 import { Controller, Get } from '@nestjs/common';
+import { QuizService } from '../service/quiz.service';
 
 @Controller('quiz')
 export class QuizController {
 
+    constructor(private readonly quizService: QuizService){}
+
     @Get('/')
-    getAllinformation() : string {
-        return "There will be all quiz for users"
+    getAllQuiz() : string {
+        return this.quizService.getAllQuiz()
     }
 }
+   
