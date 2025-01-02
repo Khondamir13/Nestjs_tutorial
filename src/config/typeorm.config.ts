@@ -1,13 +1,13 @@
 import { TypeOrmModuleOptions } from "@nestjs/typeorm";
+import { QuizEntity } from "src/modules/quiz/quiz.entity";
 
 export const typeOrmConfig : TypeOrmModuleOptions =  { 
     type: "postgres",
     host: 'localhost',
     port: 5432,
     username: 'postgres',
-    password: 'postgres',
+    password: 'Khondamir_13',
     database: 'quiz',
-    entities: [__dirname + '/**/*.entity{.ts,.js}'],
+    entities: [QuizEntity],
     synchronize: true,
-    logging: true,
 }
