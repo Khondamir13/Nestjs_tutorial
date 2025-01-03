@@ -14,8 +14,8 @@ export class QuizController {
 
     @Post('/')
     @UsePipes(ValidationPipe)
-    createQuiz(@Body() quizData:CreateQuizDTO){
-        return quizData
+    async createQuiz(@Body() quizData:CreateQuizDTO){
+        return await this.quizService.createNewQuiz(quizData)
     }
 }
    
